@@ -20,3 +20,9 @@ func (th *taskHandler) Register(r *chi.Mux) {
 	r.Post("/tasks", th.Create)
 	r.Post("/assign", th.TaskAssign)
 }
+
+func (th *taskHandler) respondError(r *chi.Mux) {
+	r.Get("/tasks", th.Get)
+	r.Post("/tasks", th.Create)
+	r.Post("/assign", th.TaskAssign)
+}
