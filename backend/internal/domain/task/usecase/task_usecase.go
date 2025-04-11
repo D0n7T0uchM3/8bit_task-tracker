@@ -5,7 +5,7 @@ import (
 )
 
 type taskRepo interface {
-	Create(context.Context, NewTask) (Task, error)
+	Create(context.Context, NewTask) (*Task, error)
 }
 
 type taskUsecase struct {

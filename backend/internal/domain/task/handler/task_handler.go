@@ -8,7 +8,7 @@ import (
 )
 
 type taskUsecase interface {
-	Create(context.Context, task_usecase.NewTask) (task_usecase.Task, error)
+	Create(context.Context, task_usecase.NewTask) (*task_usecase.Task, error)
 }
 
 type taskHandler struct {

@@ -18,8 +18,8 @@ type Task struct {
 	Coins       int       `json:"coins" db:"coins"`
 }
 
-func (task *Task) ToDomain() task_usecase.Task {
-	return task_usecase.Task{
+func (task *Task) ToDomain() *task_usecase.Task {
+	return &task_usecase.Task{
 		ID:          task.ID,
 		Title:       task.Title,
 		Description: task.Description,
