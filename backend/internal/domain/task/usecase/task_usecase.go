@@ -6,6 +6,7 @@ import (
 
 type taskRepo interface {
 	Create(context.Context, NewTask) (*Task, error)
+	Get(context.Context) ([]*Task, error)
 }
 
 type taskUsecase struct {
